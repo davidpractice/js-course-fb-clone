@@ -24,18 +24,6 @@ function onLoad(){
   var temp = [].concat(posts).reverse();
 
   temp.forEach(function(post){
-    /*
-    displayPost(post);
-    post.comments.forEach(function(comment){
-      //displayComment(post.id, comment)
-      if(shortText){
-        var tempComment = new Comment(comment.id, comment.comment.substring(0,47)+'...');
-        displayComment(tempComment.id, tempComment);
-      }
-      else{
-        displayComment(post.id, comment);
-      }
-    });*/
     if(shortText){
       if(post.status.length > 47){
         var tempPost = new Post(post.status.substring(0,47)+'...');
@@ -46,8 +34,6 @@ function onLoad(){
         displayPost(post);
       }
       post.comments.forEach(function(comment){
-        //var tempComment = new Comment(comment.id, comment.comment.substring(0,47)+'...');
-        //displayComment(tempComment.id, tempComment);
         displayComment(post.id, comment);
       });
     }
