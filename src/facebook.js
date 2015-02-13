@@ -100,5 +100,3 @@ function Comment(postId, comment){
   this.comment = comment;
   this.id = postId;
 }
-
-
